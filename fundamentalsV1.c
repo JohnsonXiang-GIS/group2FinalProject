@@ -70,7 +70,9 @@ void fundamentals(void)
 		else if (strcmp(userChoice, "2") == 0) {
 
 			char buffer2[BUFFER_SIZE];
-
+			//ask the user for an input until they enter q
+			//if it is a valid input, 
+			//print the length of the string that was entered by the user 
 			do {
 				printf("Type a string (q - to quit):\n");
 				fgets(buffer2, BUFFER_SIZE, stdin);
@@ -91,5 +93,6 @@ void fundamentals(void)
 
 
 }
+
 
 

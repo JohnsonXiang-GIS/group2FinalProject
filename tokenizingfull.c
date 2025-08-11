@@ -80,4 +80,5 @@ void tokenizing(void) {
 			printf("*** End of Tokenizing Sentences Demo ***\n\n"); // End Message
 		}
 	} while (strcmp(userChoice, "q") != 0);
+	printf("Shutting down...");
 }

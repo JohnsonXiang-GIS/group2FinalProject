@@ -65,14 +65,12 @@ void fundamentals(void)
 			} while (strcmp(buffer1, "q") != 0);
 			printf("*** End of Indexing Strings Demo***\n\n");
 
-//V2
+			//V2
 		}
 		else if (strcmp(userChoice, "2") == 0) {
 
 			char buffer2[BUFFER_SIZE];
-			//ask the user for an input until they enter q
-			//if it is a valid input, 
-			//print the length of the string that was entered by the user 
+
 			do {
 				printf("Type a string (q - to quit):\n");
 				fgets(buffer2, BUFFER_SIZE, stdin);
@@ -86,6 +84,31 @@ void fundamentals(void)
 			printf("***End of Measuring Strings Demo ***\n\n");
 		}
 
+		//V3
+		else if (strcmp(userChoice, "3") == 0) {
+
+			printf("*** Start of Copying Strings Demo ***\n");
+			char destination[BUFFER_SIZE];
+			char source[BUFFER_SIZE];
+
+			//prompt the user for a string
+			//if the user enters q, quit the module
+			//otherwise, copy the string from user input and print a copy of it.
+			do {
+				destination[0] = '\0';
+				printf("Destination string is reset to empty\n");
+				printf("Type the source string (q - to quit):\n");
+				fgets(source, BUFFER_SIZE, stdin);
+				source[strlen(source) - 1] = '\0';
+				if (strcmp(source, "q") != 0) {
+					strcpy(destination, source);
+					printf("New destination string is \'%s\'\n", destination);
+				}
+				
+ 			} while (strcmp(source, "q") != 0);
+			printf("*** End of Copying Strings Demo ***\n\n");
+		}
+
 
 	} while ( strcmp(userChoice, "q") != 0 );
 
@@ -93,6 +116,5 @@ void fundamentals(void)
 
 
 }
-
 
 
